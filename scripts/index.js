@@ -10,6 +10,7 @@ let bookmarkUrkReg = /^(http(s):\/\/.)[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\
 btnSubmit.addEventListener('click',function(){
   if(valideInput(bookmarkNameReg,bookmarkNameInput)& valideInput(bookmarkUrkReg,bookmarkUrlInput))
   {
+   
     let bookmarkObj = {
       name: bookmarkNameInput.value,
       url : bookmarkUrlInput.value
@@ -17,12 +18,21 @@ btnSubmit.addEventListener('click',function(){
     bookmarkList.push(bookmarkObj);
     localStorage.setItem('bookmarkList',JSON.stringify(bookmarkList));
     displayContent();
+  }else{
+
+    console.log('erro');
   }
 });
 
 bookmarkNameInput.addEventListener('input',function(){
   valideInput(bookmarkNameReg,bookmarkNameInput);
 })
+
+bookmarkUrlInput.addEventListener('input', function(){
+  valideInput(bookmarkUrkReg,bookmarkUrlInput);
+
+})
+
 function displayContent(){
   let htmlContent = '';
   for(let i=0; i < bookmarkList.length; i++ ){

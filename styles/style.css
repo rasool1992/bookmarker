@@ -1,6 +1,49 @@
-h1{
-  font-family: "Pacifico", cursive;
-}
-h3{
+
+
+  
+   h1{
+      font-family: "Pacifico", cursive;
+      position: relative;
+     
+  }
+  
+  
+  hr{
+  
+    width: 85%;
+    margin: auto;
+    margin-bottom: 30px;
+  
+    border: black dotted 2px ;
+  }
+  
+  h3{
+  
+  color:#afdd17;
   font-family: "Righteous", sans-serif;
+  
+  }
+  
+  a{
+  
+    color: white;
+    text-decoration: none;
+  }
+  .btn-submit{
+  
+  color:#d1512d ;   
+  }
+  
+  
+  h1::before{
+  
+    content: "";
+    position: absolute;
+    height: 25%;
+    left: 43%;
+    right: 43%;
+    bottom: 10px;
+    background-color: #fec260;
+    transition:.4s all;
+    z-index: -1;
   }
